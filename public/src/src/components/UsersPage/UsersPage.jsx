@@ -1,12 +1,14 @@
 import { UsersListItem } from "../UsersListItem/UsersListItem"
+import "../PostsPage/PostsPage.scss"
 
 
 function UsersPage({users}) {
 
-    return (
-    <ul>
+    return (<>
+    <h1>Users</h1>
+    <ul className="post-list">
         {users.map (user => (<UsersListItem user = {user}/>))}
-    </ul>)
+    </ul></>)
 }
 
 export {UsersPage}

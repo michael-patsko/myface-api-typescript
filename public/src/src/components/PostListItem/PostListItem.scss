@@ -1,0 +1,31 @@
+$foregroundColour:#DCDCDC;
+
+
+.post {
+    background-color: #151820;
+    color: $foregroundColour;
+    width:50%;
+    .post-image {
+        width:100%;
+        height:30%;
+        margin:auto;
+        object-fit: cover;
+    }
+    .profile-picture{
+        width:15%;
+        border-radius: 50%;
+        border: 2px solid $foregroundColour;
+    }
+    .bold-body{
+        font-weight:600;
+        font-size:14px;
+    }
+    .light-secondary{
+        font-weight: 300;
+        font-size: 10px;
+    }
+    .regular-body{
+        font-weight: 400;
+        font-size: 14px;
+    }
+}

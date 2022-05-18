@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import React, { useState, useEffect } from "react";
 import { PostsPage } from "./components/PostsPage/PostsPage";
 import { UsersPage } from './components/UsersPage/UsersPage';
@@ -25,14 +25,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <h1>Heading</h1>
         <Routes>
           <Route path="/posts" element={<PostsPage myPosts={myPosts} />}/>
           <Route path="/users" element={<UsersPage users={users} />}/>
           <Route path="" element={<>
             <div> Sorry this page doesn't exist, try these: </div>
             <Link to="/posts">Posts</Link>
-            <Link to="/users">Users</Link>
+            <Link to="/users"> Users</Link>
             </>} 
           />
         </Routes>

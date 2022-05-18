@@ -1,10 +1,10 @@
-
+import "../PostListItem/PostListItem.scss"
      
 function UsersListItem({user}) {
     return (
-        <li>
-            <img src = {user.profileImageUrl}></img>
-            <p>{user.name}</p>
+        <li className="post">
+            <img src = {user.profileImageUrl} className="profile-picture"></img>
+            <p className="bold-body">{user.name}</p>
         </li>
     );
 }
