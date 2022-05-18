@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react";
-import { PostList } from './components/PostList';
+import { PostListItem } from './components/PostListItem';
 
 function App() {
 
@@ -15,13 +15,8 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick = {() => console.log(myPosts)}>Click me</button>
       <ul>
-        {myPosts.map (post => (
-        <li>
-            <p> {post.message} </p>
-        </li>
-        ))}
+        {myPosts.map (post => (<PostListItem post = {post}/>))}
       </ul>
     </div>
   );
