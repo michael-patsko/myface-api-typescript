@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react";
-import { PostListItem } from './components/PostListItem';
+import { PostListItem } from './components/PostListItem/PostListItem';
 
 function App() {
 
