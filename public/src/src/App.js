@@ -29,6 +29,12 @@ function App() {
         <Routes>
           <Route path="/posts" element={<PostsPage myPosts={myPosts} />}/>
           <Route path="/users" element={<UsersPage users={users} />}/>
+          <Route path="" element={<>
+            <div> Sorry this page doesn't exist, try these: </div>
+            <Link to="/posts">Posts</Link>
+            <Link to="/users">Users</Link>
+            </>} 
+          />
         </Routes>
       </Router>
     </div>
