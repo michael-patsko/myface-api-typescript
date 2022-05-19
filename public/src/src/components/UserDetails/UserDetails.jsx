@@ -4,16 +4,16 @@ import { useParams } from "react-router-dom";
 function UserDetails () {
     
     const {id} = useParams();
-    const [user, setUser] = useState([]);
+    const [user, setUser] = useState();
 
     useEffect(() => {
       fetch(`http://localhost:3001/users/${id}`)
         .then(response => response.json())
-        .then(jsonValue => setUser(jsonValue?.results || []))
+        .then(retrievedUser => setUser(retrievedUser))
     }, [id]);
     
     return (
-        console.log(id)
+        console.log(user.name)
     );
 }
 
