@@ -1,0 +1,33 @@
+@mixin button ($color: white) {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 4px 8px 4px 8px;
+    margin: 4px;
+    display: inline-block;
+    background-color: #252A38;
+    border-radius: 8px;
+    border: 2px solid #151820;
+    color: #DCDCDC;
+
+    &:hover {
+        background-color: royalblue;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: $color;
+    }
+}
+
+.like-button {
+    @include button(lightgreen);
+}
+
+.dislike-button {
+    @include button(red);
+}
+
+.like-dislike-text {
+    font-weight: 400;
+    font-size: 14px;
+}
