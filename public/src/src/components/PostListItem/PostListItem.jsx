@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "./PostListItem.scss"
+import {Likes} from "../LikesAndDislikes/Likes";
      
 function PostListItem({post}) {
     return (
@@ -10,6 +11,7 @@ function PostListItem({post}) {
             <p className="bold-body"> {post.postedBy.username}</p>
             <p className="light-secondary"> {post.createdAt} </p>
             <p className="regular-body"> {post.message} </p>
+            <Likes lengthOfLikesArray={post.likedBy.length} postId={post.id}/>
         </li>
     );
 }

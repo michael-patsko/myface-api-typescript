@@ -2,37 +2,17 @@ import './App.scss';
 import React, { useState, useEffect } from "react";
 import { PostsPage } from "./components/PostsPage/PostsPage";
 import { UsersPage } from './components/UsersPage/UsersPage';
+import { BlankPage } from './components/BlankPage/BlankPage';
 import {BrowserRouter as Router, Routes, Switch, Route, Link} from 'react-router-dom';
 
 function App() {
-
-  const [myPosts, setMyPosts] = useState([]);
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3001/posts")
-      .then(response => response.json())
-      .then(jsonValue => setMyPosts(jsonValue?.results || []))
-  }, []);
-
-  useEffect(() => {
-    fetch("http://localhost:3001/users")
-      .then(response => response.json())
-      .then(jsonValue => setUsers(jsonValue?.results || []))
-  }, []);
-
-
   return (
-    <div className="App">
+    <div className="App">s
       <Router>
         <Routes>
-          <Route path="/posts" element={<PostsPage myPosts={myPosts} />}/>
-          <Route path="/users" element={<UsersPage users={users} />}/>
-          <Route path="" element={<>
-            <div> Sorry this page doesn't exist, try these: </div>
-            <Link to="/posts">Posts</Link>
-            <Link to="/users"> Users</Link>
-            </>} 
+          <Route path="/posts" element={<PostsPage/>}/>
+          <Route path="/users" element={<UsersPage/>}/>
+          <Route path="" element={<BlankPage/>} 
           />
         </Routes>
       </Router>

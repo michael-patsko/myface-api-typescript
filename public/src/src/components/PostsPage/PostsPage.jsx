@@ -1,8 +1,17 @@
+import React, { useState, useEffect } from "react";
 import { PostListItem } from '../PostListItem/PostListItem';
 import "./PostsPage.scss"
 
 
-function PostsPage({myPosts}) {
+function PostsPage() {
+
+    const [myPosts, setMyPosts] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3001/posts")
+          .then(response => response.json())
+          .then(jsonValue => setMyPosts(jsonValue?.results || []))
+    }, []);
 
     return (<>
     <h1>Posts</h1>
