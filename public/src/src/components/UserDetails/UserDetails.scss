@@ -1,0 +1,58 @@
+$darker-background: #151820;
+$regular-background: #252A38;
+$foreground-color: #DCDCDC;
+
+.cover-image {
+    width: 100%;
+    height: 20%;
+    object-fit: cover;
+    margin-bottom: 18%;
+    position: relative;
+}
+
+.user-details-profile-picture {
+    left: 5.5%;
+    top: 11%;
+    border: 4px solid #DCDCDC;
+    border-radius: 50%;
+    width: 28%;
+    position: absolute;
+    z-index: 1;
+    background-color: $darker-background;
+}
+
+.profile-details {
+    padding-left: 40%;
+    position: absolute;
+    top: 11%;
+    z-index: 1;
+}
+
+.empty-box {
+    width: 100%;
+    height: 15%;
+    top: 10%;
+    position: absolute;
+    background-color: $regular-background;
+    opacity: 0.56;
+    z-index: 0;
+}
+
+.profile-name {
+    margin-top: 10px;
+}
+
+.profile-username{
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 0;
+    color: $foreground-color
+}
+
+.profile-email {
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 0;
+    color: $foreground-color;
+}
+
