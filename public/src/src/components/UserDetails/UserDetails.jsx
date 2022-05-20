@@ -23,8 +23,17 @@ function UserDetails () {
             <p className = "profile-email">{user?.email}</p>
         </div>
         <div className = "empty-box"></div>
-        <ul>
+        <h2 className="profile-subtitle">{user?.name}'s Posts</h2>
+        <ul className = "user-details-post-list">
             {user?.posts.map(post => (<UserPostListItem post = {post}/>))}
+        </ul>
+        <h2 className="profile-subtitle">{user?.name}'s Likes</h2>
+        <ul className="user-details-post-list">
+            {user?.likes.map(post => <UserPostListItem post = {post}/>)}
+        </ul>
+        <h2 className="profile-subtitle">{user?.name}'s Dislikes</h2>
+        <ul className = "user-details-post-list">
+            {user?.dislikes.map(post => <UserPostListItem post = {post}/>)}
         </ul>
     </>);
 }

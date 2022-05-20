@@ -3,11 +3,11 @@ import "./UserPostListItem.scss"
      
 function UserPostListItem({post}) {
     return (
-        <li className="post">
-            <img src = {post.imageUrl} className="post-image"></img>
-            <div className="post-text">
-                <p className= "post-date"> {post.createdAt} </p>
-                <p className= "post-message"> {post.message} </p>
+        <li className="user-details-post">
+            <img src = {post.imageUrl} className="user-details-post-image"></img>
+            <div className="user-details-post-text">
+                <p className= "user-details-post-date"> {post.createdAt} </p>
+                <p className= "user-details-post-message"> {post.message} </p>
             </div>
         </li>
     );
