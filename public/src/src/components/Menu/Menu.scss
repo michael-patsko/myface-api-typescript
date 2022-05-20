@@ -1,0 +1,28 @@
+.menu-button{
+    float: left;
+    font-family: "Segoe UI", "Open Sans", "sans-serif";
+    position:absolute;
+    display:block;
+    left:0;
+    top: 0;
+    z-index:1;
+}
+
+.navigation-bar{
+    font-family: "Segoe UI", "Open Sans", "sans-serif";
+    overflow:hidden;
+    position:relative;
+    background-color: #151820;
+}
+
+.navigation-link{
+    color: #DCDCDC;
+    margin: 5px;
+    text-decoration: none;
+    display:block;
+    padding:8px 12px;
+
+    &:hover{
+        color:#2985FF;
+    }
+}

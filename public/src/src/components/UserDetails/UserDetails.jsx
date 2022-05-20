@@ -16,13 +16,15 @@ function UserDetails () {
     
     return (<>
         <img className = "cover-image" src = {user?.coverImageUrl}></img>
-        <img className = "user-details-profile-picture" src = {user?.profileImageUrl}></img>
-        <div className = "profile-details">
-            <h1 className = "profile-name">{user?.name}</h1>
-            <p className = "profile-username">{user?.username}</p>
-            <p className = "profile-email">{user?.email}</p>
+        <div className="grouped-user-details">
+            <img className = "user-details-profile-picture" src = {user?.profileImageUrl}></img>
+            <div className = "profile-details">
+                <h1 className = "profile-name">{user?.name}</h1>
+                <p className = "profile-username">{user?.username}</p>
+                <p className = "profile-email">{user?.email}</p>
+            </div>
+            <div className = "empty-box"></div>
         </div>
-        <div className = "empty-box"></div>
         <h2 className="profile-subtitle">{user?.name}'s Posts</h2>
         <ul className = "user-details-post-list">
             {user?.posts.map(post => (<UserPostListItem post = {post}/>))}
